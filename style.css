@@ -45,7 +45,7 @@
 	font-size: 70pt;
 	font-family: 'hHalfFold';
 	text-align: center;
-	animation: move 2s infinite alternate;
+	animation: move 4s infinite alternate;
 	position: absolute;
 	top: 50%;
 	bottom: 50%;
@@ -62,12 +62,44 @@ p {
 	color: white;
 }
 
+.container {
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+  
+.box {
+  border: 160px solid black;
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  -webkit-filter: blur(33px);
+  border-radius: 700px;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-selct: none;
+	user-select: none;
+}
+
 @keyframes move{
 	0% {
 		font-family: 'Checker';
 	}
-	50% {
+	25% {
 		font-family: 'hHalfFold';
+	}
+	50% {
+		font-family: 'triFold';
+	}
+	75% {
+		font-family: 'vHalfFold';
 	}
 	100% {
 		font-family: 'quadFold';
