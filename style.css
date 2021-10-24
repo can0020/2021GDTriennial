@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Checker';
+  src:  url('Remixed-NHadau-checker-2.otf');
+}
+
+@font-face {
+  font-family: 'hHalfFold';
+  src:  url('Remixed-NHadau-hHalfFold.otf');
+}
+
+@font-face {
+  font-family: 'quadFold';
+  src:  url('Remixed-NHadau-quadFold.otf');
+}
+
+@font-face {
+  font-family: 'triFold';
+  src:  url('Remixed-NHadau-triFold-2.otf');
+}
+
+@font-face {
+  font-family: 'vHalfFold';
+  src:  url('Remixed-NHadau-vHalfFold.otf');
+}
+
+.graphic {
+	min-height: 100vh;
+	min-width: 100%;
+	background-image: url(graphic.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	position: absolute;
+	z-index: 1;
+}
+
+#text_checker{
+	min-height: 100vh;
+	min-width: 100%;
+	font-size: 70pt;
+	font-family: 'hHalfFold';
+	text-align: center;
+	animation: move 2s infinite alternate;
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	z-index: 2;
+}
+
+@keyframes move{
+	0% {
+		font-family: 'Checker';
+	}
+	50% {
+		font-family: 'hHalfFold';
+	}
+	100% {
+		font-family: 'quadFold';
+	}
+}
